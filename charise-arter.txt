@@ -73,10 +73,10 @@ Questions
         - .human p
     
     22. What is a parent child selector? When would this be useful? 
-        -
+        - element > element - Used to select elements with a specific parent. WHen you want to only target a specific element in the doc.
     
     23. How do you select all links within a div with the class of sidebar?
-        -
+        - div.class a
     
     24. What is a pseudo selector?
         - special state of an element ex. a:hover selector:pseudoclass
@@ -88,7 +88,7 @@ Questions
         - letter-spacing: 2px (whatever pixels you want)
     
     27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
-        - 
+        - text-transform: uppercase/lowercase/capitalize 
     
     28. How do I add a 1px border around my div that is dotted and black?
         - border: 1px black dotted
@@ -100,7 +100,7 @@ Questions
         - /* comment */
     
     31. How do I find out what file I am in, when I am using the command line? 
-        -
+        - pwd
     
     32. Using the command line - how do I see a list of files/folders in my current folder?
         - ls
@@ -109,20 +109,47 @@ Questions
         - rm, it gives no warning prompt and it is permanent.
     
     34. Why should I use version control? 
-        -
+        - It keeps track of changes made to the code over time. If you mess up you can go back to a previous version of your code.
     
     35. How often should I commit to github?
         - Any time you make changes.
     
     36. What is the command we would use to push our repo up to github? 
-        - git push -u origin filename
+        - git push -u origin repobranchname
     
     37. Walk me through Lambda's git flow. 
+            - After getting a github account and loggin into it.
+            - create your own version of REpo by forking it. If your name is in front of it, then it worked. (yourNAme/whateverRepo)
+            - Add your TL (not Miley) as a collaborator to your forked Repo, by going to setting --> collaborators --> add collaborator.
+            - clone your repo using githubs "clone or download button copy the link
+            - open your command line/terminal and use the cd command to go to the directory you want to clone the repo. this is where it will be saved.
+            - type git clone (paste link you copied from git) and it will save into the directory you are in.
+            - type cd into the new directory you created using cs <repoName>. 
+            -type git checkout -b 'firstname-lastname' command to create your own branch. THis is the branch you will work on. It should day your name not master.
+            - TO add and commit changes to branch:
+                    git add .  - to add repo changes and make them ready for committing.
+                    git commit -m 'helpgul commit message' - commits changes with your message that explains the changes
+            - push your changes back to your github repo 
+                    - git push -u origin branch-name - will push all your commits from your local machine to github. Branch name is whatever name you specified when you did git checkout -b (should be firstname-lastname)
+
+                    After the changes are done do a pull request.
+                    - go back to forked project on git hub (not the original) and click on the Branch:master button. It will make a dropdown where you should select your name branch.
+                    - click you name branch and then click new pull request. It should direct you to the pull request page.
+                    - change the button that says base repository to your forked repo instead of the original.
+                    - Add your TL tp tjereviewers by clicking on it and typing their github name/ Hopefully they accepted your collaboration invite earlier. If not you can still finish the pull request and add them later.
+
+                    - Create pull request.
+
+                    - DO NOT MERGE YOUR OWN PULL REQUEST, your TL will do it after they are done reviewing. 
 
 Stretch Questions
 
     1. What is the difference between an inline element and a block element?
+        - Inline elements don't force a new line to begin in a document and are as big as the content inside them. Block elements do and can have a set width and height.
+        
     2. What happens when an element is positioned absolutely? 
+        - Its positioned relative to the nearest positioned ancestor. If no positioned ancestor, it uses the docs body and moves along the page scrolling.
+
     3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
     5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
