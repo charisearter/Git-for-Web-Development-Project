@@ -1,7 +1,9 @@
 Completed codepen - make it look like this
 
 
-Add mine next
+My Assignment codepen
+
+https://codepen.io/charisearter/pen/zYvOBNK?editors=1100
 
 
 
@@ -146,10 +148,15 @@ Stretch Questions
 
     1. What is the difference between an inline element and a block element?
         - Inline elements don't force a new line to begin in a document and are as big as the content inside them. Block elements do and can have a set width and height.
-        
+
     2. What happens when an element is positioned absolutely? 
         - Its positioned relative to the nearest positioned ancestor. If no positioned ancestor, it uses the docs body and moves along the page scrolling.
 
     3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        -
+
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        -
+
     5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+        - THe box model is that every element is a box.  Every element content has a width, height, padding, border and margin. If you set box-sizing to content box (div {box-sizing: content-box;}) you can be explicit in CSS. The actual width = border right and border left + margin right + margin left+ padding left + padding right + width. The actual height = margin bottom + margin top + border top + border bottom + padding top + padding bottom + height.
